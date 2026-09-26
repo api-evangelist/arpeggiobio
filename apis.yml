@@ -1,23 +1,64 @@
 aid: arpeggiobio
+
 name: Arpeggiobio
-description: 'Arpeggiobio is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Arpeggiobio is a biotech startup focused on developing advanced transcriptomics and genomics tools for biomedical research. Founded by a team of scientists and engineers, the company aims to provide open-source platforms and APIs that enable researchers to analyze single-cell data, gene expression, and molecular interactions at scale. Their mission is to accelerate discovery by making complex bioinformatics pipelines accessible via cloud services and developer-friendly APIs.'
+
 url: https://raw.githubusercontent.com/api-evangelist/arpeggiobio/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-26 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-26'
+
 modified: '2026-09-26'
+
 tags:
-- Company
-apis: []
+- biotech
+- genomics
+- transcriptomics
+- bioinformatics
+- open-source
+- APIs
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/arpeggiobio-hosts.yml
+- type: Blog
+  url: http://blog.arpeggiobio.com/
+- type: DomainSecurity
+  url: security/arpeggiobio-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/arpeggiobio
+  url: http://blog.arpeggiobio.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-09-26'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://equityzen.com/company/arpeggiobio
+    status: 403
+x-enrichment:
+  date: '2026-09-26'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
